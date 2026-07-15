@@ -16,28 +16,10 @@ body{display:flex;align-items:center;justify-content:center;height:100vh;backgro
 <body>
 <div class="loading">
   <div class="spinner"></div>
-  <p class="text">正在前往香江金融中心...</p>
+  <p class="text">正在开门...</p>
 </div>
 <script>
-(function(){
-  var ua = navigator.userAgent.toLowerCase();
-  var isWechat = ua.indexOf('micromessenger') !== -1;
-  if (isWechat) {
-    location.replace('http://hfc.hkhc.com.cn/?a=2043');
-  } else {
-    var appId = 'wxbfbc106875370721';
-    var redirectUri = encodeURIComponent('https://fuoql.github.io/');
-    location.replace(
-      'https://open.weixin.qq.com/connect/oauth2/authorize' +
-      '?appid=' + appId +
-      '&redirect_uri=' + redirectUri +
-      '&response_type=code' +
-      '&scope=snsapi_base' +
-      '&state=redirect' +
-      '#wechat_redirect'
-    );
-  }
-})();
+location.replace('http://hfc.hkhc.com.cn/ownerIndexWeChat.html');
 </script>
 </body>
 </html>
